@@ -6,7 +6,7 @@ from .models import Product, Category
 class CategorytAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "slug")
     search_fields = ("name",)
-    prepopulated_fields = {"slugs": ("name",)}
+    prepopulated_fields = {"slug": ("name",)}
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
